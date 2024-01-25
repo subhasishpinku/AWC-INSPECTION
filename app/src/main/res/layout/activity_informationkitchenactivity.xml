@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:id="@+id/rv">
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26649A"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:background="#26649A"
+                    android:minHeight="?attr/actionBarSize"
+                  />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60sp"
+                    android:layout_weight="1"
+                    android:src="@mipmap/logo" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lv1"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:layout_below="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/square">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:text="Information Of Kitchen"/>
+        </LinearLayout>
+    <TextView
+        android:id="@+id/awcstvId"
+        android:layout_below="@+id/lv"
+        android:layout_marginTop="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginLeft="@dimen/inspection_left"
+        android:layout_marginRight="@dimen/inspection_right"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="YUBA SHAKTI CLUB (19338030102 )"
+        android:background="@drawable/edit_text_shape"
+        />
+    <LinearLayout
+            android:id="@+id/lv2"
+            android:layout_below="@+id/awcstvId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_marginBottom="80sp"
+            android:layout_marginTop="10sp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/inspection_left"
+            android:layout_marginRight="@dimen/inspection_right"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:textColor="@color/colorwhite"
+                android:background="@drawable/dasboard_shape"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:text="Information Of Kitchen" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--                           field Off-->
+                <LinearLayout
+                android:id="@+id/lv3"
+                android:visibility="gone"
+                android:layout_marginTop="55sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Kitchen facility Available"
+                    android:textColor="@color/colorblack"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="-"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/kitchenID"
+                    android:layout_marginLeft="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:text="As on Aug 2018"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lv4"
+                    android:visibility="gone"
+                    android:layout_below="@+id/lv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvId1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Last Inspection Report"
+                        android:textColor="@color/colorwhite"
+                        android:background="@drawable/dasboard_shape"
+                        />
+                    <TextView
+                        android:id="@+id/kitchenlastID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorblack"
+                        android:text="Not Available"/>
+                </LinearLayout>
+                <!--                           field Off-->
+                <LinearLayout
+                    android:id="@+id/lv5"
+                    android:layout_marginTop="10sp"
+                    android:layout_below="@+id/lv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Separate Kitchen shed"
+                        android:textColor="@color/colorwhite"
+                        android:background="@drawable/dasboard_shape"
+                        />
+                    <RadioGroup
+                        android:gravity="center"
+                        android:id="@+id/kitchenradioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/YkitchenID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yes"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/NkitchenID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lv6"
+                    android:layout_below="@+id/lv5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Cooking Done Through"
+                        android:textColor="@color/colorwhite"
+                        android:background="@drawable/dasboard_shape"
+                        />
+                    <RadioGroup
+                        android:id="@+id/GcookingID"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/firewoodID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Firewood"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/keroseneID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kerosene"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"/>
+                        <RadioButton
+                            android:id="@+id/lpgID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LPG"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"/>
+                        <RadioButton
+                            android:id="@+id/otherID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Other"
+                            android:textColor="@color/colorblack"
+                            android:textSize="18sp"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lv7"
+                    android:layout_below="@+id/lv6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Give Comment"
+                        android:textColor="@color/colorwhite"
+                        android:background="@drawable/dasboard_shape"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <EditText
+                        android:layout_marginTop="5sp"
+                        android:layout_weight="1"
+                        android:id="@+id/cmdedittextID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_shape"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:lines="4"
+                        android:hint="Comment"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:scrollHorizontally="false" />
+                        <ImageButton
+                            android:id="@+id/commandspak"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/lv"
+                            android:background="@null"
+                            android:src="@drawable/ic_mic_black_24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_below="@+id/lv7"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:layout_marginTop="50sp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    &lt;!&ndash;<Button&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:id="@+id/savenextID"&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:background="@drawable/border_green"&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:textColor="@color/colorwhite"&ndash;&gt;-->
+<!--                        &lt;!&ndash;android:text="SAVE Next"/>&ndash;&gt;-->
+<!--                    <android.support.design.widget.BottomNavigationView-->
+<!--                        android:id="@+id/bottom_navigation"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        app:itemBackground="@color/colorblue"-->
+<!--                        app:itemIconTint="@color/white"-->
+<!--                        app:itemTextColor="@color/white"-->
+<!--                        app:menu="@menu/bottom_navigation_main" />-->
+<!--                </LinearLayout>-->
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemBackground="@color/colorblue"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_main" />
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

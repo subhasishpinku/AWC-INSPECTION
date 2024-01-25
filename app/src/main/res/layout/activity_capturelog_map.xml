@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/lv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorblue"
+    android:orientation="vertical">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="#26649A"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:ignore="RtlCompat" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:layout_weight="1"
+            android:src="@mipmap/logo" />
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/lvv"
+        android:layout_marginBottom="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/lv"
+        android:layout_marginTop="60sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/red">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/imageView"
+                    android:layout_width="100sp"
+                    android:layout_height="80sp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/locationimage"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/awcscodeId"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:text="AWC Code"/>
+                <LinearLayout
+                android:id="@+id/lv1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/latId"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:text="Latitude"/>
+                <TextView
+                    android:id="@+id/langId"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:text="Longitude"/>
+                    >
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lv7"
+                    android:layout_marginTop="20sp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvId3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="Building Runs In"
+                        android:textColor="@color/colorwhite"
+                        android:background="@drawable/dasboard_shape" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioGroup
+                            android:id="@+id/GrentedbuildigID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RadioButton
+                                android:id="@+id/ownbuildingID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Own Building"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+                            <RadioButton
+                                android:id="@+id/rentedbuildingID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rented Building"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+                            <RadioButton
+                                android:id="@+id/othergovebuildingID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Other Govt. Building"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+                            <RadioButton
+                                android:id="@+id/privatebuildingID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorblack"
+                                android:text="Private Building / Community"
+                                android:textSize="18sp"/>
+                            <RadioButton
+                                android:id="@+id/schoolId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorblack"
+                                android:text="School"
+                                android:textSize="18sp"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:layout_below="@+id/lvv"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CapturelogMap" />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/lvsp"
+        android:id="@+id/procedId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="SUBMIT"
+        android:background="@drawable/border_green"/>
+
+</RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:backgroundTint="@color/red"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_photo_camera_black_24dp" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorblue"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="#26649A"
+                    android:minHeight="?attr/actionBarSize"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60sp"
+                    android:layout_weight="1"
+                    android:src="@mipmap/logo" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/lv"
+            android:layout_marginTop="10sp"
+            android:id="@+id/elevendigitVisableNotvisableId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--19337020101-->
+                <EditText
+                    android:id="@+id/edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:imeOptions="actionSearch"
+                    android:hint="11 DIGIT CODE OF AWC :"
+                    android:gravity="center"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:background="@drawable/edit_text_shape" />
+                <Button
+                    android:id="@+id/searchID"
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ic_search_black_24dp"
+                    tools:ignore="RtlCompat" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/elevendigitVisableNotvisableId"
+            android:id="@+id/recyclerView"
+            android:layout_marginBottom="100sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_marginTop="10sp"
+            android:layout_gravity="end|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvId"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="MAINTAINED BY"
+                android:textColor="#26649A"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                />
+            <TextView
+                android:layout_below="@+id/tvId"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#26649A"
+                android:textStyle="italic"
+                android:text="DILIGENT ITECH PRIVATE LIMITED"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/submitID"
+            android:layout_marginBottom="40sp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:background="@drawable/border_green"
+            android:text="UPDATE LAT/LONG"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</LinearLayout>

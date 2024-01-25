@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout">
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26649A"
+        android:orientation="vertical">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--<ImageView-->
+            <!--android:id="@+id/backId"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/ic_arrow_back_black_24dp"-->
+            <!--/>-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="#26649A"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:layout_weight="1"
+                android:src="@mipmap/logo" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lv1"
+        android:gravity="center"
+        android:layout_marginTop="70sp"
+        android:layout_below="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dasboard_shape">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorwhite"
+            android:drawableLeft="@drawable/ic_profile"
+            android:textSize="20sp"
+            android:text="Inspection Done"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="100sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center" />
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/footer"-->
+        <!--android:layout_marginTop="10sp"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="center">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tvId"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:text="MANITAINED BY"-->
+            <!--android:textColor="#26649A"-->
+            <!--android:textSize="10sp"-->
+            <!--android:textStyle="italic"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_below="@+id/tvId"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="10sp"-->
+            <!--android:textColor="#26649A"-->
+            <!--android:textStyle="italic"-->
+            <!--android:text="DILIGENT ITECH PRIVATE LIMITED"/>-->
+    <!--</RelativeLayout>-->
+</android.support.design.widget.CoordinatorLayout>

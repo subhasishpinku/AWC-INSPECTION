@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv">
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26649A"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="#26649A"
+                    android:minHeight="?attr/actionBarSize"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60sp"
+                    android:layout_weight="1"
+                    android:src="@mipmap/logo" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lv1"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:layout_below="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/square">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:text="general observations"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/awcstvId"
+            android:layout_below="@+id/lv"
+            android:layout_marginTop="40sp"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginLeft="@dimen/inspection_left"
+            android:layout_marginRight="@dimen/inspection_right"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="YUBA SHAKTI CLUB (19338030102 )"
+            android:background="@drawable/edit_text_shape"
+            />
+        <LinearLayout
+            android:id="@+id/lv2"
+            android:layout_below="@+id/awcstvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_marginTop="10sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/inspection_left"
+                android:layout_marginRight="@dimen/inspection_right"
+                android:layout_height="fill_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+<!--                    temporly off-->
+                    <LinearLayout
+                        android:id="@+id/lv3"
+                        android:visibility="gone"
+                        android:layout_marginTop="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tvId"
+                                android:layout_marginTop="10sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="40sp"
+                                android:gravity="center"
+                                android:textColor="@color/colorwhite"
+                                android:background="@drawable/dasboard_shape"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:text="Duration of feeding interruption" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:id="@+id/dfiEditID"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="36sp"
+                                    android:inputType="text"
+                                    android:paddingLeft="5sp"
+                                    android:background="@drawable/edit_text_shape" />
+                                <ImageButton
+                                    android:id="@+id/dfispack"
+                                    android:layout_marginTop="5sp"
+                                    android:layout_marginRight="10sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/lv"
+                                    android:background="@null"
+                                    android:src="@drawable/ic_mic_black_24dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lv4"
+                        android:visibility="gone"
+                       android:layout_below="@+id/lv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Action from AWW &#38; Supervisor" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/afasEditID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape" />
+                        <ImageButton
+                            android:id="@+id/afasspak"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/lv"
+                            android:background="@null"
+                            android:src="@drawable/ic_mic_black_24dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+ <!--                    temporly off-->
+                    <LinearLayout
+                        android:id="@+id/lv5"
+                        android:layout_below="@+id/lv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Any community participation noticed" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/acpnEditID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape" />
+                            <ImageButton
+                                android:id="@+id/acpnspak"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/lv"
+                                android:background="@null"
+                                android:src="@drawable/ic_mic_black_24dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lv6"
+                        android:layout_below="@+id/lv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Date of last visit of the supervisor to the awc" />
+<!--                         visable gone temporly-->
+                          <LinearLayout
+                              android:visibility="gone"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/vsaEditID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape"/>
+                              <ImageButton
+                                  android:id="@+id/vsaspak"
+                                  android:layout_marginTop="5sp"
+                                  android:layout_marginRight="10sp"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_alignBottom="@+id/lv"
+                                  android:background="@null"
+                                  android:src="@drawable/ic_mic_black_24dp"/>
+                          </LinearLayout>
+ <!--                         visable gone temporly-->
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:background="@drawable/linerridues"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal"
+                            android:layout_height="35dp">
+                            <TextView
+                                android:id="@+id/FdateId"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Date"
+                                android:textStyle="bold"
+                                android:textColor="#21aad8"/>
+                            <ImageView
+                                android:id="@+id/searchID"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="0dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_date_range_black_24dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lv7"
+                        android:layout_below="@+id/lv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Date of last supusti diwas observed" />
+                        <!--                         visable gone temporly-->
+
+                        <RadioGroup
+                            android:visibility="gone"
+                            android:id="@+id/GmmorID"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/YmmorID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/NmmorID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+
+                        </RadioGroup>
+                        <!--                         visable gone temporly-->
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:background="@drawable/linerridues"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal"
+                            android:layout_height="35dp">
+                            <TextView
+                                android:id="@+id/mothermeetingId"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Date"
+                                android:textStyle="bold"
+                                android:textColor="#21aad8"/>
+                            <ImageView
+                                android:id="@+id/SPmothermeetingId"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="0dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_date_range_black_24dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lv8"
+                        android:layout_below="@+id/lv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="AW level monitoring committee formed and meeting held" />
+
+                        <RadioGroup
+                            android:id="@+id/amcfamhID"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/YamcfamhID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/NamcfamhID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lv9"
+                        android:layout_below="@+id/lv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Visit of other functionaries" />
+                        <RadioGroup
+                            android:id="@+id/visitofunID"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/YvisitofunID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/NvisitofunID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lvv1"
+                        android:layout_below="@+id/lv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Maintenance of records" />
+                        <RadioGroup
+                            android:id="@+id/mrID"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/YmrID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/NmrID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lvv2"
+                        android:layout_below="@+id/lvv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Fuel, Egg, vegetable charges received regularly" />
+                        <RadioGroup
+                            android:id="@+id/fevcrrID"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/YfevcrrID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/NfevcrrID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/colorblack"
+                                android:textSize="18sp"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lvv3"
+                        android:layout_below="@+id/lvv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="Medicine Kit received" />
+                        <!--                         visable gone temporly-->
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/mklrecivedID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape" />
+                            <ImageButton
+                                android:id="@+id/mklrecivedspeak"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/lv"
+                                android:background="@null"
+                                android:src="@drawable/ic_mic_black_24dp"/>
+                        </LinearLayout>
+                        <!--                         visable gone temporly-->
+                        <LinearLayout
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginTop="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="#21aad8"
+                                android:text="Last Received Date"/>
+                            <RelativeLayout
+                                android:gravity="center"
+                                android:background="@drawable/linerridues"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="10sp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal"
+                                android:layout_height="35dp">
+                                <TextView
+                                    android:id="@+id/medicindateId"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textStyle="bold"
+                                    android:textColor="#21aad8"/>
+                                <ImageView
+                                    android:id="@+id/medicindateIdd"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_date_range_black_24dp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                     <LinearLayout
+                         android:layout_marginTop="10sp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+                         <RadioGroup
+                             android:id="@+id/GPmedicinkitId"
+                             android:gravity="left"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical">
+                             <RadioButton
+                                 android:id="@+id/YmedicinkitId"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Available"
+                                 android:textColor="@color/colorblack"
+                                 android:textSize="18sp" />
+                             <LinearLayout
+                                 android:id="@+id/LVinuseId"
+                                 android:gravity="center"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:orientation="horizontal">
+                                 <RadioGroup
+                                     android:id="@+id/GPuseId"
+                                     android:gravity="center"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="horizontal">
+                                     <RadioButton
+                                         android:id="@+id/UuseId"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:text="Used for Awc"
+                                         android:textColor="@color/colorblack"
+                                         android:textSize="18sp" />
+                                     <RadioButton
+                                         android:id="@+id/NUuseId"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:text="Not used for AWC"
+                                         android:textColor="@color/colorblack"
+                                         android:textSize="18sp" />
+                                 </RadioGroup>
+                             </LinearLayout>
+                             <RadioButton
+                                 android:id="@+id/NmedicinkitId"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Not Available"
+                                 android:textColor="@color/colorblack"
+                                 android:textSize="18sp"/>
+                         </RadioGroup>
+                     </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lvv4"
+                        android:layout_below="@+id/lvv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="general clearness of awc and surrounding"/>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/presklrecvID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape" />
+                            <ImageButton
+                                android:id="@+id/presklrecvspeak"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/lv"
+                                android:background="@null"
+                                android:src="@drawable/ic_mic_black_24dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lvv5"
+                        android:layout_below="@+id/lvv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="general Growth Chart last received" />
+                         <LinearLayout
+                             android:visibility="gone"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/gclreciveID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36sp"
+                            android:inputType="text"
+                            android:paddingLeft="5sp"
+                            android:background="@drawable/edit_text_shape" />
+                             <ImageButton
+                                 android:id="@+id/gclrecivespake"
+                                 android:layout_marginTop="5sp"
+                                 android:layout_marginRight="10sp"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_alignBottom="@+id/lv"
+                                 android:background="@null"
+                                 android:src="@drawable/ic_mic_black_24dp"/>
+                         </LinearLayout>
+                        <LinearLayout
+                                android:layout_below="@+id/lv5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="#21aad8"
+                                android:text="general clearness of awc and surrounding"/>
+                                <RadioGroup
+                                    android:id="@+id/GbccID"
+                                    android:gravity="left"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/bccGoodID"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Good"
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="18sp" />
+
+                                    <RadioButton
+                                        android:id="@+id/bccAverage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average"
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="18sp"/>
+
+                                    <RadioButton
+                                        android:id="@+id/bccPoor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Poor"
+                                        android:textColor="@color/colorblack"
+                                        android:textSize="18sp"/>
+
+
+                                </RadioGroup>
+                            </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lvv6"
+                        android:layout_below="@+id/lvv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorwhite"
+                            android:background="@drawable/dasboard_shape"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:text="overall Remarks regarding AWC" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                            android:id="@+id/cmdID"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_text_shape"
+                            android:gravity="top|left"
+                            android:inputType="textMultiLine"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:lines="4"
+                            android:hint="Remarks regarding AWC"
+                            android:paddingStart="10sp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:scrollHorizontally="false"
+                            tools:ignore="RtlCompat" />
+                            <ImageButton
+                                android:id="@+id/cmdspak"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="10sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/lv"
+                                android:background="@null"
+                                android:src="@drawable/ic_mic_black_24dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/lv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<Button-->
+                <!--android:id="@+id/savebtn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/border_green"-->
+                <!--android:textColor="@color/colorwhite"-->
+                <!--android:text="SAVE Next"/>-->
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:itemBackground="@color/colorblue"
+                app:itemIconTint="@color/white"
+                app:itemTextColor="@color/white"
+                app:menu="@menu/bottom_navigation_main" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+        <!--android:id="@+id/start_time"-->
+        <!--android:enabled="true"-->
+        <!--android:icon="@drawable/ic_camera_alt_black_24dp"-->
+        <!--android:title="CAMERA"-->
+        <!--app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/homeID"
+        android:enabled="true"
+        android:icon="@drawable/center_detailshome"
+        android:layout_marginLeft="80dip"
+        android:title="HOME"
+        app:showAsAction="ifRoom"/>
+    <item
+    android:enabled="true"
+    android:title=""
+    app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/saveID"
+        android:enabled="true"
+        android:layout_marginLeft="80dip"
+        android:icon="@drawable/saveicon"
+        android:title="NEXT"
+        android:state_checked="true"
+        android:color="@color/red"
+        app:showAsAction="ifRoom" />
+</menu>
